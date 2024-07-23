@@ -29,5 +29,5 @@ ADD . /app/
 
 RUN pip install -r requirements.txt
 RUN pip install "git+https://github.com/facebookresearch/detectron2.git"
-
+RUN pip uninstall openai -y && pip install openai --upgrade
 ENTRYPOINT [ "python3", "server.py" ]
